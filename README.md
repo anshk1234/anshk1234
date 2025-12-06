@@ -28,7 +28,7 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=anshk1234&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=anshk1234&theme=gruvbox&no-frame=false&no-bg=false&margin-w=4)
+![](https://github.com/users/anshk1234/achievements/yolo)
 
 ---
 [![](https://visitcount.itsvg.in/api?id=anshk1234&icon=7&color=7)](https://visitcount.itsvg.in)
