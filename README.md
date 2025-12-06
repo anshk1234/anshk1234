@@ -1,6 +1,6 @@
 <h1 align="center">Hi 👋, I'm ansh kunwar</h1>
 <h3 align="center">I'm into Web dev, AI and ML.</h3> 
-Currently in Class 12, I balance academics with a deep passion for coding and project management.
+<h3 align="center">Currently in Class 12, I balance academics with a deep passion for coding and project management.</h3>
 
 ## What I Work On  
 - ⚡ I'm into core AI and ML.
