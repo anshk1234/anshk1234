@@ -27,9 +27,13 @@
 ![](https://nirzak-streak-stats.vercel.app/?user=anshk1234&theme=dark&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=anshk1234&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
----
-[![](https://visitcount.itsvg.in/api?id=anshk1234&icon=0&color=0)](https://visitcount.itsvg.in)
+## 🏆 GitHub Trophies
+![](https://github-profile-trophy.vercel.app/?username=anshk1234&theme=gruvbox&no-frame=false&no-bg=false&margin-w=4)
 
+---
+[![](https://visitcount.itsvg.in/api?id=anshk1234&icon=7&color=7)](https://visitcount.itsvg.in)
+
+<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
 
 Thanks for stopping by! Feel free to explore my projects, star ⭐ what you like, or reach out if you want to collaborate.
