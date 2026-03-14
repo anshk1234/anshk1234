@@ -6,7 +6,7 @@
 <h3 align="center">I'm into Web dev, AI and ML.</h3> 
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=thevibingteen&label=Profile%20views&color=6c417c&style=flat" alt="Profile views" />
+  <img src="https://komarev.com/ghpvc/?username=anshk1234&label=Profile%20views&color=6c417c&style=flat" alt="Profile views" />
 </p>
 
 ---
