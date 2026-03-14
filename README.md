@@ -1,6 +1,9 @@
+
+<img style="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=header&reversal=false&fontSize=70&fontColor=FFFFFF&fontAlign=50&fontAlignY=50&stroke=-&descSize=20&descAlign=50&descAlignY=50&theme=cobalt"  />
+</div>
+
 <h1 align="center">Hi 👋, I'm ansh kunwar</h1>
 <h3 align="center">I'm into Web dev, AI and ML.</h3> 
-<h3 align="center">Currently in Class 12, I balance academics with a deep passion for coding and project management.</h3>
 
 ## What I Work On  
 - ⚡ I'm into core AI and ML.
@@ -44,4 +47,6 @@
 
 Thanks for stopping by! Feel free to explore my projects, star ⭐ what you like, or reach out if you want to collaborate.
 
-
+<div>
+  <img style="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=header&reversal=false&fontSize=70&fontColor=FFFFFF&fontAlign=50&fontAlignY=50&stroke=-&descSize=20&descAlign=50&descAlignY=50&theme=cobalt"  />
+</div>
