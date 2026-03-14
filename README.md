@@ -40,7 +40,7 @@
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats-phi-ashen.vercel.app/api/top-langs/?username=anshk1234&layout=compact&theme=synthwave" height="150">
+  <img src="https://github-readme-stats-phi-ashen.vercel.app/api/top-langs/?username=anshk1234&layout=compact&theme=tokyonight" height="150">
 </p>
 
 
