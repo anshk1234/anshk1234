@@ -37,18 +37,10 @@
 
 ---
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/thevibingteen/thevibingteen/output/pacman-contribution-graph-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/thevibingteen/thevibingteen/output/pacman-contribution-graph.svg">
-  <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/thevibingteen/thevibingteen/output/pacman-contribution-graph.svg">
-</picture>
-
-###
 
 
-<div align="center">
-  <img src="https://leetcard.jacoblin.cool/thevibingteen?theme=dark&font=Roboto&ext=heatmap" width="700px" />
-</div>
+
+
 
 Thanks for stopping by! Feel free to explore my projects, star ⭐ what you like, or reach out if you want to collaborate.
 
