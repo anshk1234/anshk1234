@@ -5,6 +5,11 @@
 <h1 align="center">Hi 👋, I'm ansh kunwar</h1>
 <h3 align="center">I'm into Web dev, AI and ML.</h3> 
 
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=thevibingteen&label=Profile%20views&color=6c417c&style=flat" alt="Profile views" />
+</p>
+
+---
 ## What I Work On  
 - ⚡ I'm into core AI and ML.
 - 🐍 Python, Streamlit, OpenCV — building modular apps with real-world impact  
