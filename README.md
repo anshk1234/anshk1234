@@ -29,13 +29,22 @@
 - 🎯 Energized by coding, even when juggling exams and deployment challenges  
 
 ---
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=anshk1234&theme=dark&hide_border=false&include_all_commits=true&count_private=true)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=anshk1234&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=anshk1234&theme=dark&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
+## 📊 <b><i>GitHub Stats</i></b>
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
-<!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+<p align="center">
+  <img src="https://github-readme-stats-phi-ashen.vercel.app/api?username=anshk1234&show_icons=true&theme=tokyonight" height="170">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=anshk1234&theme=tokyonight" height="170">
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats-phi-ashen.vercel.app/api/top-langs/?username=anshk1234&layout=compact&theme=synthwave" height="150">
+</p>
+
+
+---
 
 ## 📈 <b><i>Contribution Graph</i></b>
 
