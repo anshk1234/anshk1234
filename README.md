@@ -10,10 +10,9 @@
 </p>
 
 ---
-#About Me
+About Me
 
-I build interactive web apps with Streamlit and integrate local AI models. I contribute to open-source projects, create visualization tools, and turn complex ideas into intuitive interfaces. Always exploring, always experimenting.
-
+I’m passionate about AI, Machine Learning, Web Development, and Data Science. I enjoy building projects, solving real-world problems, and exploring innovative technologies.
 ---
 ## 📊 <b><i>GitHub Stats</i></b>
 
