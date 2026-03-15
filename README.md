@@ -10,7 +10,7 @@
 </p>
 
 ---
-About Me
+#About Me
 
 I build interactive web apps with Streamlit and integrate local AI models. I contribute to open-source projects, create visualization tools, and turn complex ideas into intuitive interfaces. Always exploring, always experimenting.
 
