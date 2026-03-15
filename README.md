@@ -10,9 +10,9 @@
 </p>
 
 ---
-<h3 align="center">About Me</h3> 
+<h1 align="center">About Me</h1>
 
-I’m passionate about AI, Machine Learning, Web Development, and Data Science. I enjoy building projects, solving real-world problems, and exploring innovative technologies.
+<h3 align="center">I’m passionate about AI, Machine Learning, Web Development, and Data Science. I enjoy building projects, solving real-world problems, and exploring innovative technologies.</h3> 
 
 
 ---
