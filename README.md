@@ -10,23 +10,9 @@
 </p>
 
 ---
-## What I Work On  
-- ⚡ I'm into core AI and ML.
-- 🐍 Python, Streamlit, OpenCV — building modular apps with real-world impact  
-- 🧠 Local LLMs — curating and comparing models like Gemma 3B:1 and Phi-3 Mini  
-- 📈 Stock app with caching, summarized cards, and real-time alerts  
-- 💬 Streamlit chatbot powered by Gemma 3B:1 — optimized for local inference  
-- 🧪 Molecule visualiser — shared on Coder Legion for feedback and collaboration  
+About Me
 
-
-
-
-
-## A Bit About Me    
-- ✍️ Technical writer — invited for guest posts and public thought leadership  
-- 🧭 Strategic thinker — always planning backups and refining my workflow  
-- 🤝 Community mentor — crafting crisp, actionable answers in forums  
-- 🎯 Energized by coding, even when juggling exams and deployment challenges  
+I build interactive web apps with Streamlit and integrate local AI models. I contribute to open-source projects, create visualization tools, and turn complex ideas into intuitive interfaces. Always exploring, always experimenting.
 
 ---
 ## 📊 <b><i>GitHub Stats</i></b>
