@@ -10,9 +10,11 @@
 </p>
 
 ---
-About Me
+<h3 align="center">About Me</h3> 
 
 I’m passionate about AI, Machine Learning, Web Development, and Data Science. I enjoy building projects, solving real-world problems, and exploring innovative technologies.
+
+
 ---
 ## 📊 <b><i>GitHub Stats</i></b>
 
