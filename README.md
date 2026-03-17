@@ -12,7 +12,11 @@
 ---
 <h1 align="center">About Me</h1>
 
+<h3 align="center">Founder at DataVyn Labs | Building DataVyn platform | Python Developer</h3> 
+
 <h3 align="center">I’m passionate about AI, Machine Learning, Web Development, and Data Science. I enjoy building projects, solving real-world problems, and exploring innovative technologies.</h3> 
+
+
 
 
 ---
