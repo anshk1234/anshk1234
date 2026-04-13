@@ -51,7 +51,7 @@
 ## 📈 <b><i>Contribution Graph</i></b>
 
 <p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=anshk1234&theme=tokyonight" />
+  <img src="http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=anshk1234&theme=github_dark" />
 </p>
 
 ---
