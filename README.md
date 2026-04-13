@@ -30,19 +30,19 @@
   <tr>
     <td width="50%" align="center">
       <a href="https://github.com/anshk1234">
-        <img src="https://streak-stats.demolab.com/?user=anshk1234&theme=tokyonight&hide_border=true&stroke=a78bfa&ring=f472b6&fire=f472b6&background=00000000" width="100%" />
+        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=anshk1234&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=ffffff&icon_color=f472b6&count_private=true&include_all_commits=true" width="100%" />
       </a>
     </td>
     <td width="50%" align="center">
       <a href="https://github.com/anshk1234">
-        <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=anshk1234&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000&title_color=a78bfa&text_color=ffffff&icon_color=f472b6&count_private=true&include_all_commits=true" width="100%" />
+        <img src="https://streak-stats.demolab.com/?user=anshk1234&theme=tokyonight&hide_border=true&stroke=a78bfa&ring=f472b6&fire=f472b6&background=00000000" width="100%" />
       </a>
     </td>
   </tr>
 </table>
 
 <p align="center">
-  <img src="https://github-readme-stats-phi-ashen.vercel.app/api/top-langs/?username=anshk1234&layout=compact&theme=tokyonight" height="150">
+  <img src="https://github-readme-stats-phi-ashen.vercel.app/api/top-langs/?username=anshk1234&layout=compact&theme=tokyonight&bg_color=00000000&title_color=a78bfa&text_color=ffffff" height="150">
 </p>
 
 
