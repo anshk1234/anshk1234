@@ -41,9 +41,7 @@
   </tr>
 </table>
 
-<p align="center">
-  <img src="https://github-readme-stats-phi-ashen.vercel.app/api/top-langs/?username=anshk1234&layout=compact&theme=tokyonight&bg_color=00000000&title_color=a78bfa&text_color=ffffff" height="150">
-</p>
+
 
 
 
