@@ -9,7 +9,13 @@
   <img src="https://komarev.com/ghpvc/?username=anshk1234&label=Profile%20views&color=6c417c&style=flat" alt="Profile views" />
 </p>
 
+
+<p align="center">
+    <img src="https://img.shields.io/github/stars/anshk1234?style=for-the-badge" />
+</p>
+
 ---
+
 <h1 align="center">About Me</h1>
 
 
