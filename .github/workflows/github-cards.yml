@@ -137,10 +137,11 @@ jobs:
           const STROKE_WIDTH = 10;
 
 
-          // Colors.
-          const GREY = "#d9e6f7";
-          const BLUE = "#4c8fe8";
-          const TEXT = "#434d58";
+          // Colors (Dark Theme).
+          const GREY = "#30363d";
+          const BLUE = "#58a6ff";
+          const TEXT_TOP = "#8b949e";
+          const TEXT_PERCENT = "#e6edf3";
 
 
           // ========================================================
@@ -190,7 +191,7 @@ jobs:
               font-family="Segoe UI, Ubuntu, Sans-Serif"
               font-size="20"
               font-weight="700"
-              fill="${TEXT}"
+              fill="${TEXT_TOP}"
             >
               Top
             </text>
@@ -204,7 +205,7 @@ jobs:
               font-family="Segoe UI, Ubuntu, Sans-Serif"
               font-size="23"
               font-weight="700"
-              fill="${TEXT}"
+              fill="${TEXT_PERCENT}"
             >
               ${PERCENTAGE}%
             </text>
@@ -216,7 +217,7 @@ jobs:
           fs.writeFileSync("rank.svg", svg);
 
           console.log(
-            `Created custom rank SVG with ${PERCENTAGE}%`
+            `Created custom dark rank SVG with ${PERCENTAGE}%`
           );
 
           EOF
@@ -225,7 +226,7 @@ jobs:
       - name: Download GitHub Insights
         run: |
           curl -L \
-            "https://git-hub-insights-virid.vercel.app/api/insight?username=anshk1234&theme=github_light&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true" \
+            "https://git-hub-insights-virid.vercel.app/api/insight?username=anshk1234&theme=github_dark&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true" \
             -o insights.svg
 
           echo "Downloaded insights.svg"
