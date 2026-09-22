@@ -1,0 +1,356 @@
+name: Update GitHub Cards
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ============================================================
+      # 1. CHECKOUT
+      # ============================================================
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+
+      # ============================================================
+      # 2. NODE
+      # ============================================================
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+
+      # ============================================================
+      # 3. INSTALL SHARP
+      # ============================================================
+
+      - name: Install Sharp
+        run: npm install sharp
+
+
+      # ============================================================
+      # 4. DOWNLOAD GITHUB INSIGHTS
+      # ============================================================
+
+      - name: Download GitHub Rank
+        run: |
+          curl -L \
+            "https://github-stats-extended.vercel.app/api?username=anshk1234&rank_icon=percentile&hide=stars,commits,prs,issues,contribs&hide_title=true&hide_border=true&bg_color=00000000" \
+            -o rank.svg
+
+          echo "Downloaded rank.svg"
+          ls -lh rank.svg
+
+      - name: Extract Rank Percentage
+        run: |
+          node <<'EOF'
+
+          const fs = require("fs");
+
+          // Make sure the file exists
+          if (!fs.existsSync("rank.svg")) {
+            throw new Error("rank.svg was not found.");
+          }
+
+          const svg = fs.readFileSync("rank.svg", "utf8");
+
+          const match = svg.match(
+            /data-testid="percentile-rank-value"[\s\S]*?>\s*([\d.]+)%\s*<\/text>/
+          );
+
+          if (!match) {
+            throw new Error(
+              "Could not find percentile in rank.svg"
+            );
+          }
+
+          const percentage = parseFloat(match[1]);
+
+          if (
+            Number.isNaN(percentage) ||
+            percentage < 0 ||
+            percentage > 100
+          ) {
+            throw new Error(
+              `Invalid percentage extracted: ${percentage}`
+            );
+          }
+
+          console.log(
+            `GitHub Rank Percentage: ${percentage}%`
+          );
+
+          fs.writeFileSync(
+            "rank-percentage.txt",
+            percentage.toString()
+          );
+
+          EOF
+
+      # ============================================================
+      # 5. CREATE CUSTOM RANK SVG
+      # ============================================================
+
+      - name: Create Custom Rank SVG
+        run: |
+          node <<'EOF'
+
+          const fs = require("fs");
+
+          // ========================================================
+          // FETCH PERCENTAGE FROM API RESULT
+          // ========================================================
+
+          const PERCENTAGE = parseFloat(
+            fs.readFileSync("rank-percentage.txt", "utf8").trim()
+          );
+
+          console.log(
+            `Using GitHub API percentage: ${PERCENTAGE}%`
+          );
+
+
+          // Size of the SVG canvas.
+          const SIZE = 125;
+
+
+          // Center of the ring.
+          const CENTER = SIZE / 2;
+
+
+          // Radius of the ring.
+          const RADIUS = 55;
+
+
+          // Ring thickness.
+          const STROKE_WIDTH = 10;
+
+
+          // Colors.
+          const GREY = "#d9e6f7";
+          const BLUE = "#4c8fe8";
+          const TEXT = "#434d58";
+
+
+          // ========================================================
+          // CREATE SVG
+          // ========================================================
+
+          const svg = `
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="${SIZE}"
+            height="${SIZE}"
+            viewBox="0 0 ${SIZE} ${SIZE}"
+            fill="none"
+          >
+
+            <!-- Transparent background -->
+
+            <!-- Full grey ring -->
+            <circle
+              cx="${CENTER}"
+              cy="${CENTER}"
+              r="${RADIUS}"
+              stroke="${GREY}"
+              stroke-width="${STROKE_WIDTH}"
+              fill="none"
+            />
+
+            <!-- Blue percentage ring -->
+            <circle
+              cx="${CENTER}"
+              cy="${CENTER}"
+              r="${RADIUS}"
+              stroke="${BLUE}"
+              stroke-width="${STROKE_WIDTH}"
+              stroke-linecap="round"
+              fill="none"
+              stroke-dasharray="${(2 * Math.PI * RADIUS) * ((100 - PERCENTAGE) / 100)} ${2 * Math.PI * RADIUS}"
+              transform="rotate(-90 ${CENTER} ${CENTER})"
+            />
+
+            <!-- Centered text -->
+            <text
+              x="${CENTER}"
+              y="${CENTER - 10}"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              font-family="Segoe UI, Ubuntu, Sans-Serif"
+              font-size="20"
+              font-weight="700"
+              fill="${TEXT}"
+            >
+              Top
+            </text>
+
+            <!-- Centered percentage -->
+            <text
+              x="${CENTER}"
+              y="${CENTER + 10}"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              font-family="Segoe UI, Ubuntu, Sans-Serif"
+              font-size="23"
+              font-weight="700"
+              fill="${TEXT}"
+            >
+              ${PERCENTAGE}%
+            </text>
+
+          </svg>
+          `;
+
+
+          fs.writeFileSync("rank.svg", svg);
+
+          console.log(
+            `Created custom rank SVG with ${PERCENTAGE}%`
+          );
+
+          EOF
+
+
+      - name: Download GitHub Insights
+        run: |
+          curl -L \
+            "https://git-hub-insights-virid.vercel.app/api/insight?username=anshk1234&theme=github_light&graph=true&languages=true&streak=true&stats=true&header=true&summary=true&profile=true" \
+            -o insights.svg
+
+          echo "Downloaded insights.svg"
+          ls -lh insights.svg
+
+      # ============================================================
+      # 6. COMPOSITE EVERYTHING
+      # ============================================================
+
+      - name: Create GitHub Cards
+        run: |
+          node <<'EOF'
+
+          const sharp = require("sharp");
+
+          async function main() {
+
+            // ======================================================
+            // SETTINGS
+            // ======================================================
+
+            // High-resolution rendering.
+            const SCALE = 3;
+
+
+            // Final displayed size of the rank badge.
+            const RANK_SIZE = 80;
+
+
+            // Position on the Insights card.
+            const RANK_LEFT = 30;
+            const RANK_TOP = 30;
+
+
+            // ======================================================
+            // RENDER RANK SVG
+            // ======================================================
+
+            const rankImage = await sharp("rank.svg", {
+              density: 300
+            })
+              .resize({
+                width: RANK_SIZE * SCALE,
+                height: RANK_SIZE * SCALE
+              })
+              .png({
+                compressionLevel: 9
+              })
+              .toBuffer();
+
+
+            // ======================================================
+            // RENDER INSIGHTS SVG
+            // ======================================================
+
+            const insightsImage = await sharp("insights.svg", {
+              density: 300
+            })
+              .png({
+                compressionLevel: 9
+              })
+              .toBuffer();
+
+
+            // ======================================================
+            // PLACE RANK ON TOP OF INSIGHTS
+            // ======================================================
+
+            await sharp(insightsImage)
+              .composite([
+                {
+                  input: rankImage,
+                  left: RANK_LEFT * SCALE,
+                  top: RANK_TOP * SCALE
+                }
+              ])
+              .png({
+                compressionLevel: 9
+              })
+              .toFile("github-cards.png");
+
+
+            // ======================================================
+            // PRINT RESULT
+            // ======================================================
+
+            const metadata =
+              await sharp("github-cards.png").metadata();
+
+            console.log(
+              `Created github-cards.png: ${metadata.width}x${metadata.height}`
+            );
+
+          }
+
+          main().catch(error => {
+            console.error(error);
+            process.exit(1);
+          });
+
+          EOF
+
+
+      # ============================================================
+      # 7. COMMIT IMAGE
+      # ============================================================
+
+      - name: Commit updated card
+        run: |
+
+          git config user.name "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add github-cards.png
+
+          if git diff --cached --quiet; then
+
+            echo "No changes to commit."
+
+          else
+
+            git commit -m "Update GitHub profile cards"
+
+            git push
+
+          fi
